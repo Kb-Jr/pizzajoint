@@ -15,3 +15,6 @@
 - The default type for framer motion is usually 'spring'. On a spring type of animation you can specify other properties such as the stiffness. 
 - Other types includes the 'tween' type which is more like a linear type of transition timing function, 'just' type, 'inertia' type etc. 
 - Find out more about the types on [linktodocs]
+
+### Animate on Hover
+- To animate an element while hovering, we don't use the 'animate' prop, we use the 'whileHover' prop on the motion element.

@@ -12,7 +12,7 @@
 ### Transition
 - We can add transition properties to motion elements by adding a 'transition' prop.
 - The transition prop lets us specify rules for how the element animates such as the delay, duration, type etc.
-- The default type for framer motion is usually 'spring'. On a spring type of animation you can specify other properties such as the stiffness. 
+- The default type for framer motion is usually 'spring'. On a spring type of animation you can specify other properties such as the stiffness, damping, mass etc. 
 - Other types includes the 'tween' type which is more like a linear type of transition timing function, 'just' type, 'inertia' type etc. 
 - Find out more about the types on [linktodocs]
 
@@ -24,3 +24,5 @@
 - Makes for a cleaner code
 - variants gives us the ability to propagte animation attributes down through the DOM, that means it can make deductions from the parent element on what to pass down to the child elements.
 - We implemet this by creating a variable whose data type would be an object. In this object we define the rules which we want our initial state, animate and transition state to be. Then we reference this variable as the value of the 'variant' prop which is defined on a motion element. We also reference the initial and animate states as the values for the initial and animate props on a motion element. 
+- Transition orchestration property is defined on the parent animation variant in relation to the child animation. An example of such property is the 'when', which takes in values such as the 'beforeChildren', 'afterChildren' etc. The beforeChildren for example says animate this parent and then when it is done animate the children. 
+- Another transition orchestration property is the 'staggerChildren'which staggers the animation of children elements by the time specified

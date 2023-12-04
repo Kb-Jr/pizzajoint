@@ -18,3 +18,9 @@
 
 ### Animate on Hover
 - To animate an element while hovering, we don't use the 'animate' prop, we use the 'whileHover' prop on the motion element.
+
+### Variants
+- variants allows us to extract the 'initial' 'animate' and 'transition' properties to an outside object which we can then reference. 
+- Makes for a cleaner code
+- variants gives us the ability to propagte animation attributes down through the DOM, that means it can make deductions from the parent element on what to pass down to the child elements.
+- We implemet this by creating a variable whose data type would be an object. In this object we define the rules which we want our initial state, animate and transition state to be. Then we reference this variable as the value of the 'variant' prop which is defined on a motion element. We also reference the initial and animate states as the values for the initial and animate props on a motion element. 

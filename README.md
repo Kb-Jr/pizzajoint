@@ -33,3 +33,8 @@
 
 ### Transition Property - YoYo
 - We may want our animation to repeat itself, we can employ the transition property called 'yoyo'. A numeric value can be passed to this property and it specifies the number of times we want the animation to repeat itself. Specifying the keyword 'infinity' on the yoyo transition property will make the animation repeat itself forever. 
+
+### AnimatePresence
+- This function comes from framer motion
+- We can use it to animate elements off pages.
+- We wrap the block of code we want to conditionally render in the AnimatePresnece card, then turn the element we are animating off to a motion element. Afterwards we can specify an 'exit' property on the motion element, this defines how the element leaves the page. 

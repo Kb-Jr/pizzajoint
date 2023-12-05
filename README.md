@@ -26,3 +26,7 @@
 - We implemet this by creating a variable whose data type would be an object. In this object we define the rules which we want our initial state, animate and transition state to be. Then we reference this variable as the value of the 'variant' prop which is defined on a motion element. We also reference the initial and animate states as the values for the initial and animate props on a motion element. 
 - Transition orchestration property is defined on the parent animation variant in relation to the child animation. An example of such property is the 'when', which takes in values such as the 'beforeChildren', 'afterChildren' etc. The beforeChildren for example says animate this parent and then when it is done animate the children. 
 - Another transition orchestration property is the 'staggerChildren'which staggers the animation of children elements by the time specified
+
+### Keyframes
+- Sometimes we want an animation to transition through several differents animations. We achieve this by using keyframes.
+- In framer motion we implement keyframes by specifying the value of the property we want to animate to be an array. Items in the array will be comma separated, with each item representing an animation state. 

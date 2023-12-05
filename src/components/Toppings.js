@@ -27,6 +27,18 @@ const Toppings = ({ addTopping, pizza }) => {
     },
   };
 
+  const buttonAnimate = {
+    hover: {
+      scale:[1,1.1,1,1.1,1,1.1,1],
+      boxShadow:"0px 0px 8px rgb(255,255,255)",
+      transition:{
+        duration:3,
+        yoyo: Infinity
+      }
+    }
+  }
+  
+
   return (
     <motion.div
       className="toppings container"
@@ -53,8 +65,8 @@ const Toppings = ({ addTopping, pizza }) => {
 
       <Link to="/order">
         <motion.button
-          whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px rgb(255,255,255)" }}
-          transition={{ duration: 0.5 }}
+         variants={buttonAnimate}
+         whileHover="hover"
         >
           Order
         </motion.button>

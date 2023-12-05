@@ -30,3 +30,6 @@
 ### Keyframes
 - Sometimes we want an animation to transition through several differents animations. We achieve this by using keyframes.
 - In framer motion we implement keyframes by specifying the value of the property we want to animate to be an array. Items in the array will be comma separated, with each item representing an animation state. 
+
+### Transition Property - YoYo
+- We may want our animation to repeat itself, we can employ the transition property called 'yoyo'. A numeric value can be passed to this property and it specifies the number of times we want the animation to repeat itself. Specifying the keyword 'infinity' on the yoyo transition property will make the animation repeat itself forever. 

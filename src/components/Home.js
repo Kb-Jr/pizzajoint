@@ -5,7 +5,11 @@ import { motion } from 'framer-motion';
 const buttonAnimate = {
   hover: {
     scale:[1,1.1,1,1.1,1,1.1,1],
-    boxShadow:"0px 0px 8px rgb(255,255,255)"
+    boxShadow:"0px 0px 8px rgb(255,255,255)",
+    transition:{
+      duration:3,
+      yoyo: Infinity
+    }
   }
 }
 
@@ -23,7 +27,6 @@ const Home = () => {
         <motion.button
           variants={buttonAnimate}
           whileHover="hover"
-          transition={{duration:0.5}}
         >
           Create Your Pizza
         </motion.button>

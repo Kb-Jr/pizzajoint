@@ -150,3 +150,7 @@ li span.active::before{
   width: 10px;
   margin: 40px auto;
 }
+
+.cycle{
+  cursor: pointer;
+}

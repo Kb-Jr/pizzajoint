@@ -54,3 +54,10 @@
 - This can be achieved by wrapping the route definitions with an "AnimatePresence" tag from framer motion. the Router or Switch which wraps the route can then be passed a location prop. The location is pulled from the useLocation hook which is imported from react router. This location prop enables the router to be aware of the current location.
 - Next the exit animation can then be defined and assigned to a the motion element which wraps the the entire page.
 - It can be observed that when the pages are being animated out, the animation may not be complete before the next page kicks into view. To address this, we can add "exitBeforeEnter" as a prop on AnimatePresence. This ensures that the entire route is completely out before the next one comes into view.
+
+### Modal
+- onExitComplete
+
+
+## Resources
+### Framer Motion Documentation

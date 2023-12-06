@@ -16,6 +16,11 @@ const Toppings = ({ addTopping, pizza }) => {
       opacity: 0,
       x: "100vw",
     },
+    exit: {
+      x:"-100vw",
+      transition: { ease:'easeInOut'}
+      
+    },
 
     visible: {
       opacity: 1,
@@ -45,6 +50,7 @@ const Toppings = ({ addTopping, pizza }) => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      exit="exit"
     >
       <h3>Step 2: Choose Toppings</h3>
       <ul>

@@ -38,3 +38,10 @@
 - This function comes from framer motion
 - We can use it to animate elements off pages.
 - We wrap the block of code we want to conditionally render in the AnimatePresnece card, then turn the element we are animating off to a motion element. Afterwards we can specify an 'exit' property on the motion element, this defines how the element leaves the page. 
+
+
+### Animating Routes
+- When navigating from one route to another, the route that is left just sort of pops off the screen. The exit of this route can be animated to have a smoother transition into another route.
+- This can be achieved by wrapping the route definitions with an "AnimatePresence" tag from framer motion. the Router or Switch which wraps the route can then be passed a location prop. The location is pulled from the useLocation hook which is imported from react router. This location prop enables the router to be aware of the current location.
+- Next the exit animation can then be defined and assigned to a the motion element which wraps the the entire page. 
+- It can be observed that when the pages are being animated out, the animation may not be complete before the next page kicks into view. To address this, we can add "exitBeforeEnter" as a prop on AnimatePresence. This ensures that the entire route is completely out before the next one comes into view.

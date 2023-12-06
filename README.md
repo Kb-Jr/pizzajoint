@@ -18,7 +18,7 @@
 - The transition prop lets us specify rules for how the element animates such as the delay, duration, type etc.
 - The default type for framer motion is usually 'spring'. On a spring type of animation you can specify other properties such as the stiffness, damping, mass etc.
 - Other types includes the 'tween' type which is more like a linear type of transition timing function, 'just' type, 'inertia' type etc.
-- Find out more about the types on [linktodocs]
+- [Find out more about transition types](https://www.framer.com/motion/transition/)
 
 ### Animate on Hover
 
@@ -44,7 +44,8 @@
 
 ### AnimatePresence
 
-- This function comes from framer motion
+- This function comes from framer motion.
+- Allows components to animate out when they're removed from the React tree.
 - We can use it to animate elements off pages.
 - We wrap the block of code we want to conditionally render in the AnimatePresnece card, then turn the element we are animating off to a motion element. Afterwards we can specify an 'exit' property on the motion element, this defines how the element leaves the page.
 
@@ -56,13 +57,27 @@
 - It can be observed that when the pages are being animated out, the animation may not be complete before the next page kicks into view. To address this, we can add "exitBeforeEnter" as a prop on AnimatePresence. This ensures that the entire route is completely out before the next one comes into view.
 
 ### Modal
-- onExitComplete
 
-
-### Loader
-- 
+- We can build modals and animate their appearance and disapearance as the case may be.
+- We achieve this by building the basic interface for the modal and using same animation procedures as previously treated.
+- To decide when to show a modal or not we save this in a boolean state and pass this state to the necessary components that need it.
+- For the design specifications of this project, the modal pops up at the final page after a user has spent some seconds on the page and the call to action basically navigates the user back to the home page.
+- This was implemented by setting the modal state to true in a setTimeout hook nested in a useEffect hook with the setter function of the modal state as a dependency. So when the final page mounts, the useEffect hook runs and it sets the modal visibility state to true which then prompts the modal to animate in after the specified time elapses.
+- To ensure that the modal disapears when the page which it is called on unmounts, we use the 'onExitComplete' prop on the AnimatePresence which wraps all routes. So when the page is unmounted, the onExitComplete prop/handler fires and the function which it executes is to set the modal visibility to false.
 
 ### UseCycle
 
+- A hook that allows us to create animations based on state changes in our application.
+- The useCycle allows us to toggle between different created animations created.
+- It is created similar to the way a useState hook is created, with two arguments; a variable and a setter function and these are assigned to the usecycle hook which takes the list of animations as its values.
+- Basically, the list of animations passed to the useCycle hook are what will be assigned to the variable, and the setter function is what toggles between the list of animations.
+- The variable(state) is then assigned to the 'animate' prop on the motion element and the setter function is assigned to a handler, such that when it is interacted with, it alters the animation to the subsequent animation on the list of animations.
+
 ## Resources
-### Framer Motion Documentation
+
+- [Framer Motion Documentation](https://www.framer.com/motion/)
+- [Youtube - Framer Motion (for React) Tutorial](https://www.youtube.com/watch?v=2V1WK-3HQNk&list=PL4cUxeGkcC9iHDnQfTHEVVceOEBsOf07i)
+
+## Tutor
+
+- [Shaun Pelling](https://github.com/iamshaunjp)

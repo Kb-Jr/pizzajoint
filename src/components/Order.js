@@ -1,6 +1,6 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const Order = ({ pizza, setshowModal }) => {
   useEffect(() => {

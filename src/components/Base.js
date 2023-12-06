@@ -20,10 +20,9 @@ const Base = ({ addBase, pizza }) => {
       },
     },
     exit: {
-      x:"-100vw",
-      transition: { ease:'easeInOut'}
-      
-    }
+      x: "-100vw",
+      transition: { ease: "easeInOut" },
+    },
   };
 
   const nextVariants = {
@@ -43,15 +42,14 @@ const Base = ({ addBase, pizza }) => {
 
   const buttonAnimate = {
     hover: {
-      scale:[1,1.1,1,1.1,1,1.1,1],
-      boxShadow:"0px 0px 8px rgb(255,255,255)",
-      transition:{
-        duration:3,
-        yoyo: Infinity
-      }
-    }
-  }
-  
+      scale: [1, 1.1, 1, 1.1, 1, 1.1, 1],
+      boxShadow: "0px 0px 8px rgb(255,255,255)",
+      transition: {
+        duration: 3,
+        yoyo: Infinity,
+      },
+    },
+  };
 
   return (
     <motion.div
@@ -79,16 +77,9 @@ const Base = ({ addBase, pizza }) => {
       </ul>
 
       {pizza.base && (
-        <motion.div
-          className="next"
-          variants={nextVariants}
-          
-        >
+        <motion.div className="next" variants={nextVariants}>
           <Link to="/toppings">
-            <motion.button
-              variants={buttonAnimate}
-              whileHover="hover"
-            >
+            <motion.button variants={buttonAnimate} whileHover="hover">
               Next
             </motion.button>
           </Link>

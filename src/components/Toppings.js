@@ -17,9 +17,8 @@ const Toppings = ({ addTopping, pizza }) => {
       x: "100vw",
     },
     exit: {
-      x:"-100vw",
-      transition: { ease:'easeInOut'}
-      
+      x: "-100vw",
+      transition: { ease: "easeInOut" },
     },
 
     visible: {
@@ -34,15 +33,14 @@ const Toppings = ({ addTopping, pizza }) => {
 
   const buttonAnimate = {
     hover: {
-      scale:[1,1.1,1,1.1,1,1.1,1],
-      boxShadow:"0px 0px 8px rgb(255,255,255)",
-      transition:{
-        duration:3,
-        yoyo: Infinity
-      }
-    }
-  }
-  
+      scale: [1, 1.1, 1, 1.1, 1, 1.1, 1],
+      boxShadow: "0px 0px 8px rgb(255,255,255)",
+      transition: {
+        duration: 3,
+        yoyo: Infinity,
+      },
+    },
+  };
 
   return (
     <motion.div
@@ -70,10 +68,7 @@ const Toppings = ({ addTopping, pizza }) => {
       </ul>
 
       <Link to="/order">
-        <motion.button
-         variants={buttonAnimate}
-         whileHover="hover"
-        >
+        <motion.button variants={buttonAnimate} whileHover="hover">
           Order
         </motion.button>
       </Link>
